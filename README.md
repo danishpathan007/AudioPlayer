@@ -3,7 +3,7 @@
 # Example
 
    func presentAudioPlayerViewController() {
-      let vc = homeStoryboard.instantiateViewController(withIdentifier: AudioPlayViewController.identifier()) as? AudioPlayViewController
+           let vc = homeStoryboard.instantiateViewController(withIdentifier: AudioPlayViewController.identifier()) as? AudioPlayViewController
            vc?.audioUrl = audioMessage.url
            vc?.totalDurationInSeconds = audioMessage.duration_in_seconds
            vc?.modalPresentationStyle = .overCurrentContext
