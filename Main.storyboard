@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j7f-xu-Rao">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--AudioPlayViewController-->
+        <scene sceneID="E7b-5V-caf">
+            <objects>
+                <viewController storyboardIdentifier="AudioPlayViewController" id="j7f-xu-Rao" userLabel="AudioPlayViewController" customClass="AudioPlayViewController" customModule="iNet_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sPA-ru-JEp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swB-8I-pe7" userLabel="Bottom View" customClass="CustomViewDesignable" customModule="iNet_App" customModuleProvider="target">
+                                <rect key="frame" x="18" y="378" width="378" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="g0L-8p-Lqw">
+                                        <rect key="frame" x="20" y="98.5" width="25.5" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="bqL-XW-PbW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" name="AppPrimeColor"/>
+                                        <color key="highlightedColor" red="0.06725674123" green="0.085877887900000005" blue="0.2351337671" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="XQ8-PV-AUN">
+                                        <rect key="frame" x="332.5" y="98.5" width="25.5" height="15"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
+                                        <color key="textColor" name="AppPrimeColor"/>
+                                        <color key="highlightedColor" red="0.06725674123" green="0.085877887900000005" blue="0.2351337671" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="cw6-u0-oq1" customClass="CustomSlider" customModule="iNet_App" customModuleProvider="target">
+                                        <rect key="frame" x="18" y="58.5" width="342" height="34"/>
+                                        <color key="tintColor" name="appBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="iyj-Ep-Xbn"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="thumbBorderWidth">
+                                                <real key="value" value="3.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="thumbBackgroundColor">
+                                                <color key="value" name="appBlueColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="thumbBorderColor">
+                                                <color key="value" name="AppPrimeColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </slider>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Qsg-2Z-sLg">
+                                        <rect key="frame" x="182" y="101.5" width="14" height="14"/>
+                                    </activityIndicatorView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSc-9s-vBH" customClass="ClosureButton" customModule="iNet_App" customModuleProvider="target">
+                                        <rect key="frame" x="182" y="101.5" width="14" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="frX-4C-rKT"/>
+                                            <constraint firstAttribute="width" secondItem="BSc-9s-vBH" secondAttribute="height" multiplier="1:1" id="x36-qf-uwq"/>
+                                        </constraints>
+                                        <state key="normal" image="play"/>
+                                        <connections>
+                                            <action selector="audioPlayButtonTapped:" destination="j7f-xu-Rao" eventType="touchUpInside" id="jcM-7b-kao"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVu-YO-JTU">
+                                        <rect key="frame" x="334" y="14.5" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="hnA-gZ-ahq"/>
+                                            <constraint firstAttribute="width" secondItem="QVu-YO-JTU" secondAttribute="height" multiplier="1:1" id="oP5-9H-X7o"/>
+                                        </constraints>
+                                        <state key="normal" image="x-mark"/>
+                                        <connections>
+                                            <action selector="dismissButtonTapped:" destination="j7f-xu-Rao" eventType="touchUpInside" id="GpA-Y7-8ye"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstItem="g0L-8p-Lqw" firstAttribute="leading" secondItem="cw6-u0-oq1" secondAttribute="leading" id="3fa-EH-Cl7"/>
+                                    <constraint firstItem="cw6-u0-oq1" firstAttribute="centerY" secondItem="swB-8I-pe7" secondAttribute="centerY" id="72a-Mk-YtE"/>
+                                    <constraint firstItem="g0L-8p-Lqw" firstAttribute="top" secondItem="cw6-u0-oq1" secondAttribute="bottom" constant="7" id="7cg-uB-Phe"/>
+                                    <constraint firstItem="Qsg-2Z-sLg" firstAttribute="centerX" secondItem="BSc-9s-vBH" secondAttribute="centerX" id="9A3-09-M9V"/>
+                                    <constraint firstAttribute="height" constant="150" id="F4s-UB-Vy3"/>
+                                    <constraint firstItem="Qsg-2Z-sLg" firstAttribute="bottom" secondItem="BSc-9s-vBH" secondAttribute="bottom" id="MS3-8q-tWY"/>
+                                    <constraint firstItem="Qsg-2Z-sLg" firstAttribute="leading" secondItem="BSc-9s-vBH" secondAttribute="leading" id="SJC-qJ-XXw"/>
+                                    <constraint firstAttribute="trailing" secondItem="cw6-u0-oq1" secondAttribute="trailing" constant="20" id="YCG-nd-VXh"/>
+                                    <constraint firstItem="cw6-u0-oq1" firstAttribute="leading" secondItem="swB-8I-pe7" secondAttribute="leading" constant="20" id="ZD1-0q-HqW"/>
+                                    <constraint firstItem="XQ8-PV-AUN" firstAttribute="top" secondItem="g0L-8p-Lqw" secondAttribute="top" id="beh-pb-gdh"/>
+                                    <constraint firstItem="cw6-u0-oq1" firstAttribute="top" secondItem="QVu-YO-JTU" secondAttribute="bottom" constant="20" id="dRT-AP-tpl"/>
+                                    <constraint firstItem="BSc-9s-vBH" firstAttribute="centerX" secondItem="cw6-u0-oq1" secondAttribute="centerX" id="eYV-CR-USF"/>
+                                    <constraint firstItem="Qsg-2Z-sLg" firstAttribute="top" secondItem="BSc-9s-vBH" secondAttribute="top" id="ggc-oi-cH3"/>
+                                    <constraint firstAttribute="trailing" secondItem="QVu-YO-JTU" secondAttribute="trailing" constant="20" id="hI6-F2-gPK"/>
+                                    <constraint firstItem="cw6-u0-oq1" firstAttribute="centerX" secondItem="swB-8I-pe7" secondAttribute="centerX" id="jPK-si-3Fb"/>
+                                    <constraint firstItem="XQ8-PV-AUN" firstAttribute="trailing" secondItem="cw6-u0-oq1" secondAttribute="trailing" id="rsW-eq-WCd"/>
+                                    <constraint firstItem="BSc-9s-vBH" firstAttribute="top" secondItem="XQ8-PV-AUN" secondAttribute="top" constant="3" id="w27-Af-0AK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eSi-PU-uwe"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="swB-8I-pe7" firstAttribute="centerY" secondItem="eSi-PU-uwe" secondAttribute="centerY" id="FdI-Za-Pef"/>
+                            <constraint firstItem="swB-8I-pe7" firstAttribute="centerX" secondItem="eSi-PU-uwe" secondAttribute="centerX" id="V0w-T5-p9V"/>
+                            <constraint firstItem="swB-8I-pe7" firstAttribute="leading" secondItem="eSi-PU-uwe" secondAttribute="leading" constant="18" id="pLU-C9-FlU"/>
+                            <constraint firstItem="eSi-PU-uwe" firstAttribute="trailing" secondItem="swB-8I-pe7" secondAttribute="trailing" constant="18" id="wl4-oq-KVJ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Contact" image="tabContact" id="N4s-ER-oIO"/>
+                    <navigationItem key="navigationItem" title="Contacts" id="xTh-yn-dnd">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="cancel" id="NEa-rN-wWx"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="9cO-H7-uCK"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="Qsg-2Z-sLg" id="0Ks-VK-RZ1"/>
+                        <outlet property="audioCurrentTimeLabel" destination="g0L-8p-Lqw" id="nw1-jn-KQ1"/>
+                        <outlet property="audioHorizontalSlider" destination="cw6-u0-oq1" id="P7e-Kx-rNW"/>
+                        <outlet property="audioPlayButton" destination="BSc-9s-vBH" id="qre-ke-zDJ"/>
+                        <outlet property="audioTimeDurationLabel" destination="XQ8-PV-AUN" id="gZZ-XB-mfG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LsM-hm-Kdv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3454" y="830"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play" width="30" height="30"/>
+        <image name="tabContact" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="x-mark" width="256" height="256"/>
+        <namedColor name="AppPrimeColor">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appBlueColor">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
