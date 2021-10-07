@@ -8,4 +8,6 @@
            vc?.totalDurationInSeconds = audioMessage.duration_in_seconds
            vc?.modalPresentationStyle = .overCurrentContext
            vc?.modalTransitionStyle = .crossDissolve
-           self.present(vc!, animated: true, completion: nil) }
+           self.present(vc!, animated: true, completion: nil)
+           }
+           
